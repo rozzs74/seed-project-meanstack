@@ -1,0 +1,29 @@
+<div class="col-md-8 col-md-offset-2">
+	<form 
+		novalidate 
+		#f="ngForm" 
+		(ngSubmit)="onSave(f)">
+		<div class="form-group">
+			<label for="content">Content</label>
+			<input 
+				type="text" 
+				id="content" 
+				class="form-control"
+				name="content"
+				required
+				ngModel
+				#content="ngModel">
+				<div 
+					*ngIf="content.errors?.required && content.touched" 
+					[ngStyle]="{color: (content.errors?.required && content.touched ? 'red' : 'black') }"
+					class="error">
+					Content is required
+				</div>
+		</div>
+		<button 
+			class="btn btn-primary" 
+			type="submit">
+			Save
+		</button>
+	</form>
+</div>

@@ -1,0 +1,28 @@
+MongoDB
+    1.)Commands make sure you are inside bin folder.
+        ./mongod - starts mongoDB server
+        To run mongoDB server = ./mongod --dbpath ~/mongo-data 
+        To run mongo client idle = ./mongo
+		Make sure you have /data/db directory
+		SERVER 
+			before running mongodb server
+			if none existing create one by running this command
+			mkdir -p /data/db
+			sudo chmod -R go+w /data/db
+			then run the command again
+		CLIENT 
+			./mongo
+			a.) use <dbname> - this command is to use or acess database in mongo
+			b.) show collections - command for listing collections of the database.
+			c.) db.<collections_name>.find() - output all data in that collection 
+				example: db.messages.find()
+			d.) db.getCollectionNames() - Get all collections of database
+
+    2.) Tools
+        RoboMongo (robomongo.org) = GUI database for mongodb
+        Mongooese - MongoDB ORM client q
+		Mongo Node client - Client SDK for node apps to MongoDB
+    NOTE: Mongo command server must run always to use mongoDB.
+
+Schema allows you to create blueprint of models
+Model  is data model that determines the logical structure of database.
